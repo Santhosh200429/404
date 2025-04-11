@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access Denied | 404 Secret Lab</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1752YPLP7H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-1752YPLP7H");
+    </script>
+
+    <!-- Fonts and Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../images/tsParticles-64.png" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Varela', sans-serif;
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden; /* Allows vertical scrolling */
+      }
+
+      #tsparticles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      main.access-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem;
+        z-index: 1;
+        position: relative;
+      }
+
+      section.access-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        z-index: 2;
+      }
+
+      .illustrations img {
+        filter: drop-shadow(2px 4px 6px rgba(255, 255, 255, 0.2));
+        max-width: 100%;
+        height: auto;
+      }
+
+      .access-message h1 {
+        font-size: 4rem;
+        margin: 0;
+      }
+
+      .access-message h2 {
+        font-size: 2rem;
+        color: #e63946;
+      }
+
+      .access-message p {
+        margin: 1.5rem 0;
+        line-height: 1.6;
+      }
+
+      button {
+        padding: 0.75rem 1.5rem;
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e55b00;
+      }
+
+      @media (max-width: 600px) {
+        .access-message h1 {
+          font-size: 3rem;
+        }
+        .access-message h2 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Background Particles -->
+    <div id="tsparticles"></div>
+
+    <!-- Main Content -->
+    <main class="access-container">
+      <section class="access-content">
+        <!-- Images -->
+        <div class="illustrations">
+          <img src="404/cup.svg" alt="Cup Icon" style="width: 100px; margin-bottom: 1rem;" />
+          <img src="404/cat.svg" alt="Cat Icon" style="width: 120px;" />
+        </div>
+
+        <!-- Message Section -->
+        <div class="access-message">
+          <header>
+            <h1>404</h1>
+            <h2>Oops! Access Denied.</h2>
+          </header>
+
+          <p>
+            Looks like you've stumbled into the <strong>Secret Lab</strong>!<br />
+            This zone is <em>restricted</em> unless you’re part of the mission.<br /><br />
+            Want access to the source code?<br />
+            Let’s talk — great code has value, and this one’s priceless.
+          </p>
+
+          <button onclick="window.location.href='https://professional-portfolio-sable.vercel.app/#contact'">
+            Request Access
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Particle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script>
+      tsParticles.load("tsparticles", {
+        background: {
+          color: "#000"
+        },
+        fpsLimit: 60,
+        interactivity: {
+          events: {
+            onClick: { enable: true, mode: "push" },
+            onHover: { enable: true, mode: "repulse" },
+            resize: true
+          },
+          modes: {
+            push: { quantity: 4 },
+            repulse: { distance: 100, duration: 0.4 }
+          }
+        },
+        particles: {
+          color: { value: ["#ffffff", "#bbbbbb"] },
+          links: {
+            color: "#ffffff",
+            distance: 150,
+            enable: true,
+            opacity: 0.3,
+            width: 1
+          },
+          collisions: { enable: true },
+          move: {
+            direction: "none",
+            enable: true,
+            outModes: { default: "bounce" },
+            random: false,
+            speed: 1.2,
+            straight: false
+          },
+          number: {
+            density: { enable: true, area: 800 },
+            value: 60
+          },
+          opacity: { value: 0.5 },
+          shape: { type: "circle" },
+          size: { value: { min: 1, max: 4 } }
+        },
+        detectRetina: true
+      });
+    </script>
+  </body>
+</html>
